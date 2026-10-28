@@ -44,6 +44,13 @@ $services = [
         'price' => 200.00,
         'icon' => '🖼️',
     ],
+    [
+        'slug' => 'soveniers',
+        'title' => 'Soveniers',
+        'description' => 'Custom printed keepsakes and gifts to help guests remember a special event.',
+        'price' => 75.00,
+        'icon' => '🎁',
+    ],
 ];
 
 $team = [
