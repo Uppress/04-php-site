@@ -1,6 +1,9 @@
 <?php
+declare(strict_types=1);
+
 $pageTitle = 'About';
 require_once __DIR__ . '/includes/config.php';
+require_once __DIR__ . '/includes/data.php';
 require_once __DIR__ . '/includes/header.php';
 ?>
 <section class="page-hero">
@@ -25,22 +28,20 @@ require_once __DIR__ . '/includes/header.php';
 </section>
 
 <section class="section section-tint">
-    <div class="container values-grid">
-        <article>
-            <span class="card-number">01</span>
-            <h3>Listen closely</h3>
-            <p>We start with your goals, audience, and practical needs.</p>
-        </article>
-        <article>
-            <span class="card-number">02</span>
-            <h3>Make it matter</h3>
-            <p>We help choose materials and details that suit the message.</p>
-        </article>
-        <article>
-            <span class="card-number">03</span>
-            <h3>Deliver with care</h3>
-            <p>We keep communication clear at every step of the process.</p>
-        </article>
+    <div class="container">
+        <div class="section-heading">
+            <p class="eyebrow">Meet the team</p>
+            <h2>Good people behind good print.</h2>
+        </div>
+        <div class="team-grid">
+            <?php foreach ($team as $member): ?>
+                <article class="team-card">
+                    <h3><?= e($member['name']) ?></h3>
+                    <p class="team-role"><?= e($member['role']) ?></p>
+                    <p><?= e($member['bio']) ?></p>
+                </article>
+            <?php endforeach; ?>
+        </div>
     </div>
 </section>
 <?php require_once __DIR__ . '/includes/footer.php'; ?>
