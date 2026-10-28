@@ -1,4 +1,6 @@
 <?php
+declare(strict_types=1);
+
 $pageTitle = 'Contact';
 require_once __DIR__ . '/includes/config.php';
 require_once __DIR__ . '/includes/header.php';
@@ -20,8 +22,8 @@ require_once __DIR__ . '/includes/header.php';
         </div>
         <div class="contact-card">
             <span class="contact-label">Email</span>
-            <a class="contact-email" href="mailto:<?= htmlspecialchars($contactEmail, ENT_QUOTES, 'UTF-8') ?>">
-                <?= htmlspecialchars($contactEmail, ENT_QUOTES, 'UTF-8') ?>
+            <a class="contact-email" href="mailto:<?= e($contactEmail) ?>">
+                <?= e($contactEmail) ?>
             </a>
             <p>For a quicker conversation, include your preferred format, quantity, and timing.</p>
         </div>

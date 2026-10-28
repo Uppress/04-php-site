@@ -282,6 +282,84 @@ h3 {
     font-size: 14px;
 }
 
+.service-card h2 {
+    margin-bottom: 12px;
+    font-size: 24px;
+}
+
+.service-card .service-price {
+    margin: 18px 0 14px;
+    color: var(--green);
+    font-weight: 700;
+}
+
+.service-icon {
+    display: inline-grid;
+    min-width: 48px;
+    min-height: 48px;
+    margin-bottom: 20px;
+    place-items: center;
+    border-radius: 50%;
+    background: var(--tint);
+    font-size: 24px;
+}
+
+.team-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 18px;
+}
+
+.team-card {
+    padding: 26px;
+    border: 1px solid var(--line);
+    background: var(--paper);
+}
+
+.team-card h3 {
+    margin-bottom: 6px;
+}
+
+.team-card p:last-child {
+    margin-bottom: 0;
+    color: var(--muted);
+    font-size: 14px;
+}
+
+.team-role {
+    margin-bottom: 14px;
+    color: var(--green);
+    font-size: 13px;
+    font-weight: 700;
+}
+
+.service-detail {
+    max-width: 760px;
+}
+
+.service-detail-card {
+    padding: 42px;
+    border: 1px solid var(--line);
+    background: var(--tint);
+}
+
+.service-detail-card .service-icon {
+    background: var(--paper);
+}
+
+.detail-price {
+    margin: -8px 0 18px;
+    color: var(--green);
+    font-family: var(--serif);
+    font-size: 32px;
+}
+
+.service-detail-card > p:not(.eyebrow, .detail-price) {
+    max-width: 580px;
+    margin-bottom: 26px;
+    color: var(--muted);
+}
+
 .card-number {
     display: block;
     margin-bottom: 26px;
@@ -471,7 +549,8 @@ h3 {
     }
 
     .card-grid,
-    .values-grid {
+    .values-grid,
+    .team-grid {
         grid-template-columns: 1fr;
         gap: 14px;
     }
