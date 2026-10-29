@@ -561,6 +561,104 @@ h3 {
     color: #842e27;
 }
 
+.messages-container {
+    min-width: 0;
+}
+
+.messages-login {
+    max-width: 520px;
+    margin: 0 auto;
+}
+
+.messages-login > p,
+.empty-state {
+    color: var(--muted);
+}
+
+.messages-toolbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+    margin-bottom: 24px;
+}
+
+.messages-toolbar h2 {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin: 0;
+    font-size: 30px;
+}
+
+.count-badge {
+    display: inline-flex;
+    min-width: 34px;
+    height: 34px;
+    align-items: center;
+    justify-content: center;
+    padding: 0 9px;
+    border-radius: 999px;
+    background: var(--green);
+    color: white;
+    font-family: var(--sans);
+    font-size: 14px;
+    font-weight: 700;
+    letter-spacing: 0;
+}
+
+.button-outline {
+    border-color: var(--line);
+    background: transparent;
+    color: var(--green);
+}
+
+.button-outline:hover {
+    background: var(--tint);
+}
+
+.messages-table-wrap {
+    overflow-x: auto;
+    border: 1px solid var(--line);
+    background: var(--paper);
+}
+
+.messages-table {
+    width: 100%;
+    border-collapse: collapse;
+    text-align: left;
+}
+
+.messages-table th,
+.messages-table td {
+    padding: 14px 16px;
+    border-bottom: 1px solid var(--line);
+    vertical-align: top;
+}
+
+.messages-table th {
+    background: var(--tint);
+    color: var(--ink);
+    font-size: 12px;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+}
+
+.messages-table td {
+    color: var(--muted);
+    font-size: 14px;
+}
+
+.messages-table tbody tr:last-child td {
+    border-bottom: 0;
+}
+
+.message-cell {
+    min-width: 240px;
+    white-space: pre-wrap;
+    overflow-wrap: anywhere;
+}
+
 .site-footer {
     padding: 24px 0;
     border-top: 1px solid var(--line);
@@ -656,6 +754,11 @@ h3 {
     }
 
     .callout {
+        align-items: flex-start;
+        flex-direction: column;
+    }
+
+    .messages-toolbar {
         align-items: flex-start;
         flex-direction: column;
     }
